@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Python ROCKS!</title>
+</head>
+<body>
+I love Python!
+Coding is fun.
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+  integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
+  crossorigin="anonymous"></script>
+<script src="https://df5xnw9spjr9d.cloudfront.net/lex-web-ui-loader.min.js"></script>
+<script>
+  var loaderOpts = {
+    baseUrl: 'https://df5xnw9spjr9d.cloudfront.net/',
+    shouldLoadMinDeps: true
+  };
+  var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
+  var chatbotUiConfig = {
+          /* Example of setting session attributes on parent page
+          lex: {
+            sessionAttributes: {
+              userAgent: navigator.userAgent,
+              QNAClientFilter: ''
+            }
+          }
+          */
+        };
+  loader.load(chatbotUiConfig)
+    .catch(function (error) { console.error(error); });
+</script>
+<style>
+   #lex-web-ui-iframe{
+   display: flex !important
+   }
+</style>
+</html>
